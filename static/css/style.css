@@ -1,0 +1,449 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #16C47F;
+}
+
+/* Style the scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body {
+    background-color: #F8FAFC;
+}
+
+.nav-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+    background-color: white;
+    box-shadow: 0px 1px 0px rgb(218, 213, 213);
+    padding-bottom: 0;
+    position: sticky;
+    top: 0;
+}
+
+.material-symbols-outlined {
+    font-size: 150px;
+}
+
+.logo {
+    margin: 2px 0px 0 15px;
+}
+
+.logo img {
+    border-radius: 5px;
+}
+
+.navbar {
+    margin: 10px;
+    margin-right: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+.navbar a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    font-family: "Bebas Neue", serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.navbar a:hover {
+    transform: scale(1.1);
+}
+.navbar a:active{
+    color: #16C47F;
+}
+.hero {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero img {
+    margin-top: 30px;
+    height: 450px;
+    width: 1100px;
+    border-radius: 8px;
+}
+
+.check-button {
+    display: flex;
+    justify-content: center;
+}
+
+.check-button button {
+    height: 70px;
+    width: 650px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #5DB996;
+    color: white;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    cursor: pointer;
+    font-family: "Bebas Neue", serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.check-button button:hover {
+    background-color: black;
+    color: white;
+}
+
+.about {
+    padding: 50px;
+    margin: 30px;
+}
+
+.about h1 {
+    color: black;
+    font-size: 3rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+}
+
+.about-box {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.about-image img {
+    border-radius: 5px;
+}
+
+.about-info {
+    padding: 20px;
+}
+
+.about-info p {
+    color: #6C757D;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.review {
+    padding: 50px;
+    margin: 30px;
+}
+
+.review h1 {
+    color: black;
+    font-size: 3rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+}
+
+.review-box {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* scrolls only horizontally */
+    padding: 20px;
+    scroll-snap-type: x mandatory; /* smooth snap scrolling (optional) */
+}
+
+.box {
+    flex: 0 0 auto; 
+    width: 300px;
+    background-color: white;
+    border: 1px solid gainsboro;
+    box-shadow: 3px 3px 3px gray;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    word-wrap: break-word;
+    scroll-snap-align: start;
+}
+
+
+.reviews-box {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: 2px solid #00b894;
+    background-color: white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.box h3 {
+    color: black;
+}
+
+.box p {
+    color: #6C757D;
+    font-weight: 100;
+}
+
+.footer {
+    height: auto;
+    width: auto;
+    background-color: #EEEEEE;
+    padding: 20px;
+    border-top: 1px solid rgb(210, 204, 204);
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.footer .box1 {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-right: 40px;
+    padding: 20px;
+}
+
+.footer .box1 img {
+    border-radius: 5px;
+}
+
+.footer .sub-nav {
+    margin-right: 150px;
+    padding: 40px;
+    width: 300px;
+}
+
+.footer .sub-nav ul {
+    text-decoration: none;
+    list-style-type: none;
+    line-height: 2rem;
+}
+
+.footer .sub-nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.list-item:hover {
+    transform: scale(1.1);
+}
+
+.footer .sub-about {
+    padding: 40px;
+}
+
+.footer .sub-about p {
+    color: black;
+    font-size: 0.9rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.input-form {
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-heading {
+    color: #222;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.input-form form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-form form label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.input-form form input,
+.input-form form select {
+    padding: 12px;
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: 0.3s;
+    background-color: white;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.input-form form input:focus,
+.input-form form select:focus {
+    border-color: #16C47F;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(22, 196, 127, 0.3);
+}
+
+.radio-in {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.input-form form button {
+    width: 100%;
+    height: 55px;
+    font-size: 1.3rem;
+    background-color: #16C47F;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.input-form form button:hover {
+    background-color: #128A5E;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.output {
+    margin-top: 40px;
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.output-head h1 {
+    color: #222;
+    font-size: 2.5rem;
+}
+
+.price h1 {
+    font-size: 3rem;
+    color: #16C47F;
+    font-weight: bold;
+}
+
+/* Responsive Design for Mobile Screens */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    .check-button button {
+        width: 100%;
+    }
+
+    .about-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-image img {
+        width: 100%;
+    }
+    .review-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .review-box .box{
+        border-bottom: 1px solid black;
+    }
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .sub-nav,
+    .footer .box1 {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .box {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .material-symbols-outlined {
+        font-size: 100px;
+    }
+
+    .logo img {
+        width: 80%;
+        height: auto;
+    }
+    .input-form{
+        padding: 40px;
+        
+    }
+    .form-heading{
+        
+        font-size: 1.5rem;
+    }
+    .input-form form label{
+        
+        font-size: 1rem;
+        text-align: center;
+    }
+    .input-form form select{
+    /* padding: 15px; */
+    /* margin: 10px; */
+    width: 50%;
+    }
+    .input-form form option{
+        font-size: 0.5rem;
+    
+    }
+    .nav-box {
+        position: relative;
+    }
+}

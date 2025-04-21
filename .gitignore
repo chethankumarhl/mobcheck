@@ -1,0 +1,63 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Flask & general Python environment
+instance/
+.env
+.venv/
+venv/
+ENV/
+env/
+*.env
+*.bak
+.DS_Store
+
+# PyMongo/MongoDB
+*.lock
+*.db
+*.json
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Model files
+*.pkl
+model/
+
+# Logs
+*.log
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Mac
+.DS_Store
+
+# Heroku/Python Build Artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+pip-wheel-metadata/
+
+# Unit test cache
+.cache/
+.pytest_cache/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# MongoDB dump folder (if any)
+dump/
+
+# Database secrets or keys (if you ever export any config)
+config.py
+settings.py

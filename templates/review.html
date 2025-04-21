@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Review</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 184, 148, 0.2);
+            padding: 30px 35px;
+            width: 100%;
+            max-width: 500px;
+            border: 1px solid #00b894;
+        }
+
+        h2 {
+            text-align: center;
+            color: #00b894;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #00b894;
+        }
+
+        input, select, textarea {
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: 1px solid #00b894;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #00b894;
+            box-shadow: 0 0 5px rgba(0, 184, 148, 0.4);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .btn {
+            background-color: #00b894;
+            color: white;
+            font-size: 1.1rem;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #00a383;
+            box-shadow: 0 4px 12px rgba(0, 184, 148, 0.3);
+            transform: translateY(-1px);
+        }
+
+        .bottom-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .bottom-link a {
+            color: #00b894;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .bottom-link a:hover {
+            text-decoration: underline;
+        }
+
+        #word-count-msg {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Submit Your Review</h2>
+        <form method="POST" action="/review">
+            <label for="rating">Rating:</label>
+            <select name="rating" required>
+                <option value="1">⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+            </select>
+
+            <label for="title">Review Title:</label>
+            <input type="text" name="title" placeholder="Enter Title" required>
+
+            <label for="review">Review Content:</label>
+            <textarea name="review" id="review" placeholder="Enter your review..." required oninput="checkWordLimit(this)"></textarea>
+            <small id="word-count-msg" style="color: #e74c3c;"></small>
+
+            <label for="username">Your Name:</label>
+            <input type="text" name="username" placeholder="Enter Your Name" required>
+
+            <button type="submit" class="btn">Submit Review</button>
+        </form>
+
+        <div class="bottom-link">
+            <a href="/">← Back to Home</a>
+        </div>
+    </div>
+    <script>
+        function checkWordLimit(textarea) {
+            const maxWords = 100;
+            const words = textarea.value.trim().split(/\s+/);
+            const wordCount = words.filter(word => word.length > 0).length;
+            const msg = document.getElementById("word-count-msg");
+
+            if (wordCount > maxWords) {
+                msg.textContent = `Limit exceeded! Only 100 words allowed.`;
+                textarea.value = words.slice(0, maxWords).join(" ");
+            } else {
+                msg.textContent = `${wordCount}/100 words`;
+            }
+        }
+    </script>
+</body>
+</html>

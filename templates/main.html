@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOBCHECK</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=check_circle" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=more_up" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-box">
+        <div class="logo">
+            <img class="logo-name" src="../static/images/logo1.png" alt="logo" height="70px" width="130px">
+        </div>
+        <div class="navbar">
+            <a href="/">Home</a>
+            <a href="/main">Check Price</a>
+            <a href="#about">About</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="input-form">
+        <form action="/predict" method="post">
+            <label for="device_brand">Device Brand:</label>
+            <input type="text" id="device_brand" name="device_brand" placeholder="e.g., Samsung" required><br>
+
+            <label for="os">Operating System:</label>
+            <input type="text" id="os" name="os" placeholder="e.g., Android" required><br>
+
+            <label for="4g">4G Support (yes/no):</label>
+            <input type="text" id="4g" name="4g" placeholder="yes or no" required><br>
+
+            <label for="5g">5G Support (yes/no):</label>
+            <input type="text" id="5g" name="5g" placeholder="yes or no" required><br>
+
+            <label for="screen_size">Screen Size (in inches):</label>
+            <input type="text" id="screen_size" name="screen_size" placeholder="e.g., 6.5" required><br>
+
+            <label for="rear_camera_mp">Rear Camera (MP):</label>
+            <input type="text" id="rear_camera_mp" name="rear_camera_mp" placeholder="e.g., 12" required><br>
+
+            <label for="front_camera_mp">Front Camera (MP):</label>
+            <input type="text" id="front_camera_mp" name="front_camera_mp" placeholder="e.g., 8" required><br>
+
+            <label for="internal_memory">Internal Memory (GB):</label>
+            <input type="text" id="internal_memory" name="internal_memory" placeholder="e.g., 128" required><br>
+
+            <label for="ram">RAM (GB):</label>
+            <input type="text" id="ram" name="ram" placeholder="e.g., 6" required><br>
+
+            <label for="battery">Battery Capacity (mAh):</label>
+            <input type="text" id="battery" name="battery" placeholder="e.g., 4000" required><br>
+
+            <label for="weight">Weight (grams):</label>
+            <input type="text" id="weight" name="weight" placeholder="e.g., 180" required><br>
+
+            <label for="release_year">Release Year:</label>
+            <input type="text" id="release_year" name="release_year" placeholder="e.g., 2020" required><br>
+
+            <label for="days_used">Days Used:</label>
+            <input type="text" id="days_used" name="days_used" placeholder="e.g., 365" required><br>
+
+            <label for="normalized_new_price">Original New Price (in ₹):</label>
+            <input type="text" id="normalized_new_price" name="normalized_new_price" placeholder="e.g., 50000" required><br>
+
+            <button type="submit">Predict</button>
+        </form>
+
+      
+    </div>
+    <div class="output">
+        {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+    </div>
+     <!-- Footer -->
+     <div class="footer">
+        <div class="box1">
+            <div><img src="../static/images/logo1.png" alt="logo" height="120px"></div>
+            <div class="social">
+                <p style="color: black;font-family: Arial, Helvetica, sans-serif;">© 2025 Copyright reserved </p>
+            </div>
+        </div>
+        <div class="sub-nav">
+            <ul>
+                <li><a class="list-item" href="/">Home</a></li>
+                <li><a href="/main">Check$</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+        <div class="sub-about" id="about">
+            <p>Mob Check is your go-to platform for quick and easy used mobile price estimation. Whether you're looking to buy or sell a pre-owned smartphone, we provide an instant price guess to help you make a better decision.
+    <br><br>
+                Why Use Mob Check?<br>
+                🔹 Instant Price Estimates – No need for long searches; get a rough price in seconds.<br>
+                🔹 User-Friendly & Free – Just enter a few details, and we’ll do the rest.<br>
+                🔹 Smart Selling & Buying – Know the estimated value before making a deal.</p>
+        </div>
+       </div>
+       <!-- <script src="../JS/script.js"></script> -->
+</body>
+</html>
