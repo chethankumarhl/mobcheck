@@ -25,9 +25,9 @@ env/
 # PyCharm
 .idea/
 
-# Model files
-*.pkl
-model/
+# # Model files
+# *.pkl
+# model/
 
 # Logs
 *.log

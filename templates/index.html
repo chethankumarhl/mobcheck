@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOBCHECK</title>
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
 <body>
     <div class="nav-box">
         <div class="logo">
-            <img class="logo-name" src="../static/images/logo1.png" alt="logo" height="70px" width="130px">
+            <img class="logo-name" src="{{ url_for('static', filename='images/logo1.png') }}" alt="logo" height="70px" width="130px">
         </div>
         <div class="navbar">
             <a href="/">Home</a>
@@ -32,8 +32,8 @@
         </div>
     </div>
     <div class="hero">
-        <img src="../static/images/hero2.png" alt="hero" >
-       </div>
+        <img src="{{ url_for('static', filename='images/hero2.png') }}" alt="hero">
+    </div>
        <div class="check-button"><a href="/main"><button>Check Price Of Your Old device<span style="color: white;font-size: 2rem;" class="material-symbols-outlined">
         more_up
         </span></button></a></div>
@@ -41,7 +41,8 @@
        <div class="about" id="about">
         <h1>About Mobcheck</h1>
         <div class="about-box">
-        <div class="about-image"> <img src="../static/images/logo1.png" alt="logo" height="280px">  </div>
+        <div class="about-image"> <img src="{{ url_for('static', filename='images/logo1.png') }}" alt="logo" height="280px">
+        </div>
         <div class="about-info"><p>Mob Check is a simple and smart tool designed to help you estimate the price of used mobile phones instantly. Whether you're planning to buy or sell a pre-owned smartphone, our platform provides a quick price guess based on basic factors like brand, model, and condition. With an easy-to-use interface, you can get an estimated value within seconds, helping you make informed decisions before making a deal. While our predictions are not exact, they give you a helpful price range, allowing you to negotiate better and avoid overpaying or underselling. Mob Check is a hassle-free way to get an idea of your phone’s worth—try it today and see what your device could be valued at! 🚀📱</p></div>
        </div>
        </div>
@@ -77,7 +78,8 @@
        </div>
        <div class="footer">
         <div class="box1">
-            <div><img src="../static/images/logo1.png" alt="logo" height="120px"></div>
+            <div><img src="{{ url_for('static', filename='images/logo1.png') }}" alt="logo" height="120px">
+            </div>
             <div class="social">
                 <p style="color: black;font-family: Arial, Helvetica, sans-serif;">© 2025 Copyright reserved </p>
             </div>

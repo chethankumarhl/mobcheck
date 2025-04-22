@@ -5,6 +5,7 @@ import os
 from flask_pymongo import PyMongo
 from dotenv import load_dotenv
 load_dotenv()
+app = Flask(__name__, static_folder='static')
 
 app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY')

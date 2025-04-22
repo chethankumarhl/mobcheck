@@ -14,7 +14,7 @@
         }
 
         body {
-            background: url("../static/images/background.jpg") no-repeat center center/cover;
+            background: url("{{ url_for('static', filename='images/background.jpg') }}") no-repeat center center/cover;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -107,10 +107,12 @@
         a:hover {
             text-decoration: underline;
         }
-        #reg{
+
+        #reg {
             margin-top: 10px;
             color: white;
         }
+
         @media (max-width: 480px) {
             .login-container {
                 width: 90%;
@@ -121,23 +123,23 @@
 <body>
 
     <div class="header">
-        <img src="../static/images/logo1.png" alt="logo">
+        <img src="{{ url_for('static', filename='images/logo1.png') }}" alt="logo">
     </div>
 
     <div class="login-container">
         <h2>Login</h2>
 
-{% if error %}
-    <div style="color: red; margin-bottom: 10px;">{{ error }}</div>
-{% endif %}
+        {% if error %}
+            <div style="color: red; margin-bottom: 10px;">{{ error }}</div>
+        {% endif %}
 
-<form action="/login" method="POST">
-    <input type="text" class="input-box" name="username" placeholder="Enter Username" required>
-    <input type="password" class="input-box" name="password" placeholder="Enter Password" required>
-    <button type="submit" class="btn">Login</button>
-</form>
+        <form action="/login" method="POST">
+            <input type="text" class="input-box" name="username" placeholder="Enter Username" required>
+            <input type="password" class="input-box" name="password" placeholder="Enter Password" required>
+            <button type="submit" class="btn">Login</button>
+        </form>
 
-<p id="reg">Don't have an account? <a href="/registerp">Register Here</a></p>
+        <p id="reg">Don't have an account? <a href="/registerp">Register Here</a></p>
     </div>
 
 </body>
