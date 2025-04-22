@@ -1,11 +1,14 @@
 from flask import Flask, render_template, request, url_for, redirect, session
 import pandas as pd
 import joblib
+import os
 from flask_pymongo import PyMongo
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = 'PASSWORD'  # Set a secret key for session management
-app.config["MONGO_URI"] = "mongodb://localhost:27017/loginMobile"
+app.secret_key = os.environ.get('SECRET_KEY')
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 mongo = PyMongo(app)
 
 try:
